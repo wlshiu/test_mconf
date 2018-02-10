@@ -498,7 +498,7 @@ int main(int ac, char **av)
 	const char *name, *defconfig_file = NULL /* gcc uninit */;
 	struct stat tmpstat;
 
- {
+    {
         time_t      rawtime;
         struct tm   *timeinfo;
         time(&rawtime);

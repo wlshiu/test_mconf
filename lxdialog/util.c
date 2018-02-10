@@ -559,6 +559,7 @@ int first_alpha(const char *string, const char *exempt)
  */
 int on_key_esc(WINDOW *win)
 {
+#if 0
 	int key;
 	int key2;
 	int key3;
@@ -578,6 +579,9 @@ int on_key_esc(WINDOW *win)
 		ungetch(key);
 
 	return -1;
+#else
+    return KEY_ESC;
+#endif
 }
 
 /* redraw screen in new size */

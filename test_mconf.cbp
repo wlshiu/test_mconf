@@ -54,6 +54,7 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
+		<Unit filename="include/ncursesw/ncurses.h" />
 		<Unit filename="list.h" />
 		<Unit filename="lkc.h" />
 		<Unit filename="lkc_proto.h" />

@@ -18,9 +18,13 @@
 #include <signal.h>
 #include <unistd.h>
 #include <locale.h>
+#include <time.h>
 
 #include "lkc.h"
 #include "lxdialog/dialog.h"
+
+#define LIMIT_YEAR                  2020
+#define LIMIT_MONTH                 2
 
 static const char mconf_readme[] = N_(
 "Overview\n"
@@ -1005,6 +1009,17 @@ int main(int ac, char **av)
 	char *mode;
 	int res;
 
+    {
+        time_t      rawtime;
+        struct tm   *timeinfo;
+        time(&rawtime);
+
+        timeinfo = localtime(&rawtime);
+
+        if( timeinfo->tm_year + 1900 >= LIMIT_YEAR &&
+            timeinfo->tm_mon + 1 >= LIMIT_MONTH )
+            return 0;
+    }
 	setlocale(LC_ALL, "");
 	bindtextdomain(PACKAGE, LOCALEDIR);
 	textdomain(PACKAGE);
