@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="test_mconf" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/test_mconf" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Option parameters="./kconfig_ex/Kconfig" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option='-DCURSES_LOC=&quot;&lt;ncurses.h&gt;&quot;' />
+					<Add option="-DLOCALE" />
+					<Add option="-DHAVE_CONFIG_H" />
+					<Add directory="include" />
+					<Add directory="include/ncurses" />
+					<Add directory="include/ncursesw" />
+				</Compiler>
+				<Linker>
+					<Add option="-llibintl3" />
+					<Add option="-llibiconv2" />
+					<Add library="lib/libncursesw.a" />
+					<Add directory="lib" />
+				</Linker>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/test_mconf" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="list.h" />
+		<Unit filename="lkc.h" />
+		<Unit filename="lkc_proto.h" />
+		<Unit filename="lxdialog/checklist.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lxdialog/dialog.h" />
+		<Unit filename="lxdialog/inputbox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lxdialog/menubox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lxdialog/textbox.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lxdialog/util.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="lxdialog/yesno.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="mconf.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="regex-2.7/config.h" />
+		<Unit filename="regex-2.7/re_comp.h" />
+		<Unit filename="regex-2.7/regex.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="regex-2.7/regex.h" />
+		<Unit filename="regex-2.7/regex_internal.h" />
+		<Unit filename="zconf.tab.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

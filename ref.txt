@@ -1,0 +1,14 @@
+  HOSTCC  scripts/kconfig/conf.o
+  HOSTCC  scripts/kconfig/lxdialog/checklist.o
+  HOSTCC  scripts/kconfig/lxdialog/inputbox.o
+  HOSTCC  scripts/kconfig/lxdialog/menubox.o
+  HOSTCC  scripts/kconfig/lxdialog/textbox.o
+  HOSTCC  scripts/kconfig/lxdialog/util.o
+  HOSTCC  scripts/kconfig/lxdialog/yesno.o
+  HOSTCC  scripts/kconfig/mconf.o
+  SHIPPED scripts/kconfig/zconf.tab.c
+  SHIPPED scripts/kconfig/zconf.lex.c
+  SHIPPED scripts/kconfig/zconf.hash.c
+  HOSTCC  scripts/kconfig/zconf.tab.o
+  HOSTLD  scripts/kconfig/mconf
+scripts/kconfig/mconf Kconfig
