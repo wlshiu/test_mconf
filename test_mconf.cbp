@@ -35,9 +35,19 @@
 				<Option compiler="gcc" />
 				<Compiler>
 					<Add option="-O2" />
+					<Add option='-DCURSES_LOC=&quot;&lt;ncurses.h&gt;&quot;' />
+					<Add option="-DLOCALE" />
+					<Add option="-DHAVE_CONFIG_H" />
+					<Add directory="include" />
+					<Add directory="include/ncurses" />
+					<Add directory="include/ncursesw" />
 				</Compiler>
 				<Linker>
 					<Add option="-s" />
+					<Add option="-llibintl3" />
+					<Add option="-llibiconv2" />
+					<Add library="lib/libncursesw.a" />
+					<Add directory="lib" />
 				</Linker>
 			</Target>
 		</Build>
